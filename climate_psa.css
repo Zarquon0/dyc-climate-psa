@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    color: rgb(241, 241, 241);
+}
+
+#background {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#background img {
+    height: 100%;
+    width: auto;
+}
+
+h1,h2,h5 {
+    text-align: center;
+    font-family: "Ubuntu";
+    margin-bottom: 1.5rem
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+p {
+    font-family: "Lexend";
+    font-size: 20px;
+}
+
+header, footer, section {
+    margin: 3vh 3vw;
+}
+
+header, footer {
+    background-color: #5B98D6;
+    border-radius: 20px;
+    padding: min(2rem,3vw);
+}
+
+section {
+    display: grid;
+    width: calc(100% - 6vw);
+    column-gap: 3vw;
+}
+
+.left {
+    grid-template: 100% / 6fr 4fr;
+}
+
+.right {
+    grid-template: 100% / 4fr 6fr !important;
+}
+
+section .text, section figure {
+    border-radius: 20px;
+    padding: min(2rem,3vw);
+}
+
+section .text p {
+    overflow: scroll;
+}
+
+.left .text {
+    grid-area: 1 2 / 1 2;
+    background-color: #9FC164;
+}
+
+.right .text {
+    grid-area: 1 2 / 2 3;
+    background-color: #5B98D6;
+}
+
+section figure {
+    background-color: #836539;
+    display: flex;
+    align-items: center;
+}
+
+.left figure {
+    grid-area: 1 2 / 2 3;
+}
+
+.right figure {
+    grid-area: 1 2 / 1 2;
+}
+
+section figure img {
+    width: 100%;
+    height: auto;
+}
+
+section figure img[src*='small'] {
+    display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+    section figure img[src*='small'] {
+        display: block;
+    }
+
+    section figure img[src*='big'] {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    section figure {
+        display: none;
+    }
+
+    .left, .right {
+        display: block;
+    }
+}
+
+/*
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    border-bottom: 3px solid black;
+    background-color: rgb(49, 171, 49);
+    align-items: center;
+}
+
+header h2 {
+    text-align: center;
+    flex-grow: 1;
+    font-family: "Ubuntu";
+    color: rgb(228, 227, 227);
+    font-size: 30px;
+}
+
+header img {
+    height: 10vh;
+    width: auto;
+}
+
+#filler {
+    height: 10vh;
+    width: 15.55vh;
+}
+*/
